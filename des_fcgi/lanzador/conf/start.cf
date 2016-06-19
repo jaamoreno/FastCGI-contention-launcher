@@ -1,0 +1,21 @@
+; Fichero de configuracion del lanzador de CGIs
+
+[config]        						;configuracion
+logName=/home/kit/fcgi_logs/fcgi
+
+cgiProgram = /home/kit/des_fcgi/cgi-bin/echoCGI3
+
+statisticsName = /home/kit/fcgi_sta/sta		;nombre del fichero de estadisticas
+stats = On		;activa o desactiva la escritura de estadisticas (on|off)
+
+traceLevel=40							;nivel de traza
+childTimeOut = 12						;time out para los hijos
+
+maxProcess = 100						;numero maximo de procesos
+maxBusyProcess = 95						;maximo numero de procesos ocupados
+maxSoftBusyProcess = 90 					;maximo numero de procesos ocupados 1er nivel
+
+paginaErrorGenerico = https://www2.xxx.es/gen/error_bol.htm?idItem=000_000_000_000_000_000
+paginaErrorSoft = https://www2.xxx.es/esp/gbp/htm/salida.htm?opt=pa_a&codigoerror=616
+paginaErrorHard = https://www2.xxx.es/gen/error_bol.htm?codigoerror=616&idItem=000_000_000_000_000_000
+
